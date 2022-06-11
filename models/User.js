@@ -1,3 +1,3 @@
-const mongoose = require('mongoose');
-const { isEmail } = require('validator');
-const bcrypt = require('bcrypt');
+import mongoose from 'mongoose';
+import { isEmail } from 'validator';
+import bcrypt from 'bcrypt';
