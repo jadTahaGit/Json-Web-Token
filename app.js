@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes.js';
 import cookieParser from 'cookie-parser';
 import { requireAuth, checkUser } from './middleware/authMiddleware.js';
+import 'dotenv/config';
 
 // use express
 const app = express();
@@ -16,8 +17,7 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI =
-  'mongodb+srv://jadtaha:8JlOTrtdfH1u@cluster0.imrf7.mongodb.net/node-auth?';
+const dbURI = process.env.dbURI;
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
@@ -27,7 +27,7 @@ mongoose
   .then((result) => {
     console.log('DB connected Successfully');
     console.log('Listining on Server 4001');
-    app.listen(4001);
+    app.listen(process.env.PORT || 4001);
   })
   .catch((err) => console.log(err));
 
