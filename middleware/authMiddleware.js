@@ -1,5 +1,5 @@
-const JWT = require('jsonwebtoken');
-const User = require('../models/User');
+import JWT from 'jsonwebtoken';
+import User from '../models/User';
 
 const requireAuth = (req, res, next) => {
   const token = req.cookies.access_token;
