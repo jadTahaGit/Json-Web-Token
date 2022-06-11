@@ -31,5 +31,6 @@ mongoose
   .catch((err) => console.log(err));
 
 // routes
+app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
-app.get('/jutsus', (req, res) => res.render('jutsus'));
+app.get('/jutsus', requireAuth, (req, res) => res.render('jutsus'));
