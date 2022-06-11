@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import authRouters from './routers/authRouters.js';
 import cookieParser from 'cookie-parser';
-import { requireAuth, checkUser } from './middleware/authMiddleware';
+import { requireAuth, checkUser } from './middleware/authMiddleware.js';
 
 // use express
 const app = express();
@@ -10,6 +10,7 @@ const app = express();
 // middleware
 app.use(express.static('public'));
 app.use(express.json());
+app.use(cookieParser());
 
 // view engine
 app.set('view engine', 'ejs');

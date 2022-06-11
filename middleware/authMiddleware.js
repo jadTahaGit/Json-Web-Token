@@ -1,7 +1,7 @@
 import JWT from 'jsonwebtoken';
-import User from '../models/User';
+import User from './../models/User.js';
 
-const requireAuth = (req, res, next) => {
+export const requireAuth = (req, res, next) => {
   const token = req.cookies.access_token;
 
   // check json web token exists & is verified
@@ -21,7 +21,7 @@ const requireAuth = (req, res, next) => {
 };
 
 // check current user
-const checkUser = (req, res, next) => {
+export const checkUser = (req, res, next) => {
   const token = req.cookies.access_token;
   if (token) {
     JWT.verify(token, 'FedJadPedKarAli2022', async (err, decodedToken) => {
@@ -43,5 +43,3 @@ const checkUser = (req, res, next) => {
     next();
   }
 };
-
-module.exports = { requireAuth, checkUser };

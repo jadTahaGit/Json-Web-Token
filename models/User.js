@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { isEmail } from 'validator';
+import validator from 'validator';
 import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema({
@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Please enter an Email'],
     unique: true,
     lowercase: true,
-    validate: [isEmail, 'Please enter a valid Email'],
+    validate: [validator.isEmail, 'Please enter a valid Email'],
   },
   password: {
     type: String,
@@ -40,4 +40,4 @@ userSchema.statics.login = async function (email, password) {
 
 const User = mongoose.model('users', userSchema);
 
-module.exports = User;
+export default User;
