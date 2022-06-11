@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jadTahaGit/Json-Web-Token/issues"
   },
-  "homepage": "https://github.com/jadTahaGit/Json-Web-Token#readme"
+  "homepage": "https://github.com/jadTahaGit/Json-Web-Token#readme",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
 }
