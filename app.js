@@ -1,6 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import authRouters from './routers/authRouters.js';
+const cookieParser = require('cookie-parser');
+const { requireAuth, checkUser } = require('./middleware/authMiddleware');
+
+// use express
 const app = express();
 
 // middleware
