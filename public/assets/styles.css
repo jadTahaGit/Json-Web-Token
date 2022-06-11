@@ -124,3 +124,9 @@ header .btn {
   display: inline-block;
   font-size: 0.8em;
 }
+
+footer {
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
