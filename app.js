@@ -20,7 +20,10 @@ mongoose
   })
   .then((result) => {
     console.log('DB connected Successfully');
-    console.log('Listining on Server 4000');
-    app.listen(4000);
+    console.log('Listining on Server 4001');
+    app.listen(4001);
   })
   .catch((err) => console.log(err));
+
+// routes
+app.get('/', (req, res) => res.render('home'));
