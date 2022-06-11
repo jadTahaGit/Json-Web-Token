@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const ejs = require('ejs');
+import fs from 'fs';
+import path from 'path';
+import ejs from 'ejs';
 
 function ejs2html({ path, outPath, data, options }) {
   fs.readFile(path, 'utf8', function (err, data) {
