@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import authRouters from './routes/authRouters';
 const app = express();
 
 // middleware
