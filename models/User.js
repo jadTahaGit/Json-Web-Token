@@ -16,3 +16,11 @@ const userSchema = new mongoose.Schema({
     minlength: [6, 'Minimum password length is a 6 charachtars'],
   },
 });
+
+// hash the password
+userSchema.pre('save', async function (next) {
+  const salt = await bcrypt.genSalt();
+  console.log(this.password);
+  this.password = await bcrypt.hash(this.password, 10);
+  next();
+});
