@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "AN EJS App with the JWT Authentication concepts",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
