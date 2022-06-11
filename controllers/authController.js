@@ -40,6 +40,7 @@ export const signup_get = (req, res) => {
 };
 
 export const login_get = (req, res) => {
+  console.log('login_get');
   res.render('login');
 };
 

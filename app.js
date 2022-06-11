@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import authRouters from './routers/authRouters.js';
+import authRoutes from './routes/authRoutes.js';
 import cookieParser from 'cookie-parser';
 import { requireAuth, checkUser } from './middleware/authMiddleware.js';
 
@@ -35,3 +35,4 @@ mongoose
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
 app.get('/jutsus', requireAuth, (req, res) => res.render('jutsus'));
+app.use(authRoutes);
