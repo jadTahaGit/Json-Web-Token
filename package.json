@@ -1,0 +1,19 @@
+{
+  "name": "json-web-token",
+  "version": "1.0.0",
+  "description": "AN EJS App with the JWT Authentication concepts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadTahaGit/Json-Web-Token.git"
+  },
+  "author": "Jad Taha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jadTahaGit/Json-Web-Token/issues"
+  },
+  "homepage": "https://github.com/jadTahaGit/Json-Web-Token#readme"
+}
