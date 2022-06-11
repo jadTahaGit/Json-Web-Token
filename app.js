@@ -28,3 +28,4 @@ mongoose
 
 // routes
 app.get('/', (req, res) => res.render('home'));
+app.get('/jutsus', (req, res) => res.render('jutsus'));
