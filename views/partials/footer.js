@@ -1,11 +1,4 @@
-<%- include('partials/header'); -%>
+<footer>Copyright 2022 Jad Taha</footer>
 
-<header>
-    <div className="headings">
-        <h2>Naruto Movements</h2>
-        <h3>By Jad Taha</h2>
-        <a href="/movements" class="btn"> View Movements</a>
-    </div>
-</header>
-
-<%- include('partials/footer'); -%>
+</body>
+</html>
