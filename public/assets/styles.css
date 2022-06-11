@@ -54,7 +54,8 @@ nav li a {
 }
 .btn {
   border-radius: 36px;
-  background: #fee996;
+  background: #f47938;
+  color: white;
 }
 form h2 {
   font-size: 2.4em;
@@ -123,6 +124,39 @@ header .btn {
   font-weight: bold;
   display: inline-block;
   font-size: 0.8em;
+}
+
+.jutsus {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80px AUTO;
+  max-width: 1200px;
+}
+
+.jutsu {
+  display: inline-block;
+  border-radius: 20px;
+  background: #f47938;
+  position: relative;
+  text-align: center;
+  padding: 20px 20px 30px 20px;
+}
+
+.jutsu h4,
+.jutsu p {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.jutsu p {
+  margin-bottom: 20px;
+}
+
+.jutsu img {
+  width: 400px;
+  margin: -30px auto 20px;
 }
 
 footer {
